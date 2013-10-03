@@ -4,11 +4,15 @@ angular.module('sitdownApp')
   .controller('MainCtrl', function ($scope) {
       marked.setOptions({
           gfm: true,
-          highlight: function (code, lang, callback) {
-              pygmentize({ lang: lang, format: 'html' }, code, function (err, result) {
-                  if (err) return callback(err);
-                  callback(null, result.toString());
-              });
+          highlight: function (code, lang) {
+              if (lang) {
+                  if (lang === 'objc') {
+                      lang = 'objectivec'; //TODO: a mapping here
+                  }
+                  return hljs.highlight(lang, code).value;
+              } else {
+                  hljs.highlightAuto(code).value;
+              }
           },
           tables: true,
           breaks: false,
