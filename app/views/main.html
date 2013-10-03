@@ -2,6 +2,8 @@
     <textarea ui-codemirror="{
         lineNumbers: true,
         mode: 'gfm',
-        theme: 'rubyblue'
+        theme: 'rubyblue',
+        onChange: parseMarkdown
         }" ng-model='markdown'></textarea>
+    <div id='preview' ng-bind-html-unsafe='markdownHTML'><div>
 </div>
