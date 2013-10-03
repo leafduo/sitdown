@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sitdownApp', [])
+angular.module('sitdownApp', ['ui.codemirror'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
