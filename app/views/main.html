@@ -1,14 +1,12 @@
-<div class="hero-unit">
-    <textarea ui-codemirror="{
-        lineNumbers: true,
-        mode: 'gfm',
-        theme: 'rubyblue',
-        onChange: parseMarkdown
-        }" ng-model='markdown'>```objectivec
-        - (IBAction)starButtonPressed:(id)sender {
-        _post.starred = !_post.starred;
-        self.post = _post;
-        }
-    ```</textarea>
-    <div id='preview' ng-bind-html-unsafe='markdownHTML'><div>
-</div>
+<textarea id='editor' ui-codemirror="{
+    lineNumbers: true,
+    mode: 'gfm',
+    theme: 'rubyblue',
+    onChange: parseMarkdown
+    }" ng-model='markdown'>```objectivec
+- (IBAction)starButtonPressed:(id)sender {
+    _post.starred = !_post.starred;
+    self.post = _post;
+}
+```</textarea>
+<div id='preview' ng-bind-html-unsafe='markdownHTML'><div>
