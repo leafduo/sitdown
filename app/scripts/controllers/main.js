@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('sitdownApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, storage) {
       marked.setOptions({
           gfm: true,
           highlight: function (code, lang) {
@@ -26,4 +26,7 @@ angular.module('sitdownApp')
       $scope.parseMarkdown = function() {
           $scope.markdownHTML = marked($scope.markdown);
       }
+
+      storage.bind($scope, 'markdown');
+      $scope.parseMarkdown();
   });
