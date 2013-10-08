@@ -16,7 +16,9 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should parse markdown', function () {
+    scope.markdown = '_markdown_';
+    scope.parseMarkdown();  //FIXME: Should I execute it manually?
+    expect(scope.markdownHTML).toEqual('<p><em>markdown</em></p>\n');
   });
 });

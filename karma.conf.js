@@ -13,6 +13,15 @@ module.exports = function(config) {
     files: [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/bower_components/angular-cookies/angular-cookies.js',
+      'app/bower_components/codemirror/lib/codemirror.js',
+      'app/bower_components/codemirror/addon/mode/overlay.js',
+      'app/bower_components/codemirror/mode/markdown/markdown.js',
+      'app/bower_components/codemirror/mode/gfm/gfm.js',
+      'app/bower_components/angular-ui-codemirror/ui-codemirror.js',
+      'app/bower_components/marked/lib/marked.js',
+      'app/bower_components/highlightjs/highlight.pack.js',
+      'app/bower_components/angularLocalStorage/src/angularLocalStorage.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
@@ -31,7 +40,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // Start these browsers, currently available:
