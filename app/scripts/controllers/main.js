@@ -25,10 +25,8 @@ angular.module('sitdownApp')
       langPrefix: 'lang-'
     });
 
-    $scope.parseMarkdown = function() {
-      $scope.markdownHTML = marked($scope.markdown);
-    };
-
     storage.bind($scope, 'markdown');
-    $scope.parseMarkdown();
+    $scope.$watch('markdown', function() {
+      $scope.markdownHTML = marked($scope.markdown);
+    });
   });

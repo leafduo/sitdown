@@ -18,7 +18,7 @@ describe('Controller: MainCtrl', function () {
 
   it('should parse markdown', function () {
     scope.markdown = '_markdown_';
-    scope.parseMarkdown();  //FIXME: Should I execute it manually?
+    scope.$apply();
     expect(scope.markdownHTML).toEqual('<p><em>markdown</em></p>\n');
   });
 });
