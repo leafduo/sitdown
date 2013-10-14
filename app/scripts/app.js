@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sitdownApp', ['ui.codemirror', 'angularLocalStorage'])
+angular.module('sitdownApp', ['ui.codemirror', 'angularLocalStorage', 'dropstore-ng'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

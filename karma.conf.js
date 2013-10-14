@@ -22,6 +22,8 @@ module.exports = function(config) {
       'app/bower_components/marked/lib/marked.js',
       'app/bower_components/highlightjs/highlight.pack.js',
       'app/bower_components/angularLocalStorage/src/angularLocalStorage.js',
+      'app/bower_components/dropstore-ng/dropstore-ng.js',
+      'http://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.1/dropbox.min.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
@@ -42,6 +44,7 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
+    reporters: ['progress', 'osx'],
 
     // Start these browsers, currently available:
     // - Chrome
