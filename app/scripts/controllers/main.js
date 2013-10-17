@@ -6,20 +6,23 @@
 var setupMarked;
 
 angular.module('sitdownApp')
-  .controller('MainCtrl', function ($scope, storage, dropstoreClient) {
-    setupMarked();
-    storage.bind($scope, 'markdown');
-    $scope.$watch('markdown', function() {
-      $scope.markdownHTML = marked($scope.markdown);
-    });
-
-    dropstoreClient.create({key: '329f6vsjz20pgs0'})
-    .authenticate({interactive: true})
-    .then(function(datastoremanager) {
-      console.log('cocmpleted authentication');
-      return datastoremManager.openDefaultDataStore();
-    });
+.controller('MainCtrl', function ($scope, storage, dropstoreClient) {
+  setupMarked();
+  storage.bind($scope, 'markdown');
+  $scope.$watch('markdown', function() {
+    $scope.markdownHTML = marked($scope.markdown);
   });
+});
+
+var authenticateDropbox = function() {
+  dropstoreClient.create({key: '329f6vsjz20pgs0'})
+  .authenticate({interactive: true})
+  .then(function(datastoremanager) {
+    console.log('cocmpleted authentication');
+    return datastoremManager.openDefaultDataStore();
+  });
+}
+
 
 var setupMarked = function() {
   marked.setOptions({
@@ -43,4 +46,3 @@ var setupMarked = function() {
     langPrefix: 'lang-'
   });
 };
-
