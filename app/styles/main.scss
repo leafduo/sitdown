@@ -20,18 +20,20 @@ html, body {
     height: 100%;
 }
 
-.CodeMirror {
-    position: fixed;
+.CodeMirror-wrap {
+    position: fixed !important;
+  margin-top: 35px;
     width: 50%;
     top: 0;
     bottom: 0;
     left: 0;
-    height: 100% !important;
-    overflow: auto;
+    height: auto !important;
+    overflow: scroll;
 }
 
 #preview {
     position: fixed;
+    margin-top: 35px;
     left:50%;
     right: 0;
     top: 0;
