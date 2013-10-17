@@ -1,9 +1,9 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-@import "bootstrap-sass/lib/bootstrap";
+$navbar-height: 35px;
 
-/* Put your CSS here */
+@import "bootstrap-sass/lib/bootstrap";
 
 body {
     background: #fafafa;
