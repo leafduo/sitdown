@@ -1,0 +1,22 @@
+{
+  "name": "dropstore-ng",
+  "version": "1.0.4",
+  "main": "dropstore-ng.js",
+  "ignore": [
+    "example",
+    ".idea",
+    ".git"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/AnalogJ/dropstore-ng",
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.4",
+    "commit": "1c5f3e0f67414027a95f7be95bf80dde3ce18fb1"
+  },
+  "_source": "git://github.com/AnalogJ/dropstore-ng.git",
+  "_target": "~1.0.4",
+  "_originalSource": "dropstore-ng"
+}
