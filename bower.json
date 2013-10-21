@@ -14,7 +14,7 @@
     "marked": "~0.2.9",
     "highlightjs": "~7.3.0",
     "angularLocalStorage": "~0.1.7",
-    "dropstore-ng": "~1.0.4"
+    "dropbox-build": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",
