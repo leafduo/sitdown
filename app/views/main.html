@@ -1,7 +1,6 @@
-<textarea id='editor' ui-codemirror="{
+<div id='editor-container'><textarea id='editor' ui-codemirror="{
     lineNumbers: true,
     mode: 'gfm',
-    lineWrapping: true,
-    theme: 'rubyblue'
-    }" ng-model='markdown'></textarea>
+    lineWrapping: true
+    }" ng-model='markdown'></textarea></div>
 <div id='preview' ng-bind-html-unsafe='markdownHTML'><div>

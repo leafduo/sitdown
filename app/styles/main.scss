@@ -21,13 +21,16 @@ html, body {
 }
 
 .CodeMirror {
-    position: fixed;
-    width: 50%;
-    top: 0;
-    bottom: 0;
-    left: 0;
     height: 100% !important;
     overflow: auto;
+}
+
+#editor-container {
+  position: fixed;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
 #preview {
